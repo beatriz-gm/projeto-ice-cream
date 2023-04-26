@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-text: 'Palanquin', sans-serif;
+  --ff-title: 'Staatliches', cursive;
+  
+  --hue: 250;
+  --bg-h1: hsl(var(--hue), 18%, 79%);
+  --bg-body: hsl(var(--hue), 100%, 97%);
+  --bg-header: hsl(218, 17%, 62%);
+  --bg-h2: hsl(var(--hue), 91%, 96%);
+
+  --fc-h1: hsl(var(--hue),0%, 100%);
+  --fc-h2: hsl(var(--hue), 17%, 35%);
+  --fc-p: hsl(var(--hue), 84%, 12%);
+}
+
+.page {
+  margin: auto;
+  width: 42.6rem;
+}
+
+body {
+  background-color: var(--bg-body);
+  margin: 0 auto;
+}
+
+header {
+  background: var(--bg-header);
+  text-align: center;
+}
+
+#logo {
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+  animation: topdown 2s backwards;
+  position: relative;
+}
+
+#h1 {
+  background: var(--bg-h1);
+  height: 5rem;
+}
+
+header h1 {
+  font-family: var(--ff-title);
+  color: var(--fc-h1);
+  letter-spacing: 5%;
+  line-height: 3.4rem;
+  font-size: 4rem;
+  font-weight: 400;
+  padding: 0.9rem;
+  text-transform: uppercase;
+}
+
+.images {
+  position: relative;
+  text-align: center;
+}
+
+.images img {
+  object-fit: cover;
+  width: 32rem;
+  border-radius: 2rem;
+  margin-bottom: 3.6rem;
+  animation: downtop 500ms;
+}
+
+.images h2 {
+  position: absolute;
+  right: 7.1rem;
+  top: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  animation: topdown 2s;
+
+  border-radius: 2rem;
+  background-color: var(--bg-h2);
+  padding: 0 2.3rem;
+
+  font-family: var(--ff-title);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 5%rem;
+  text-transform: uppercase;
+  line-height: 3.4rem;
+  color: var(--fc-h2);
+}
+
+main p {
+  font-size: 2rem;
+  font-family: var(--ff-text);
+  color: var(--fc-p);
+  line-height: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 2rem 4rem 6.3rem 4rem;
+}
+
+@keyframes topdown {
+  0% { 
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
